@@ -1,0 +1,31 @@
+<configuration>
+
+    <!-- Root logger definition, logging at INFO level -->
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <!-- Logger for your specific package/class (if needed) -->
+    <logger name="api.testcases.UserTest2" level="DEBUG">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- File Appender definition -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- Specify the path to store logs -->
+        <file>logs/testcases.log</file> <!-- Log file will be stored here -->
+
+        <!-- Log format pattern -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+        <!-- Optional to keep the log files from growing too large -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/testcases-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory> <!-- Retains logs for the last 30 days -->
+            <totalSizeCap>10MB</totalSizeCap> <!-- Total size cap of the logs -->
+        </rollingPolicy>
+    </appender>
+
+</configuration>

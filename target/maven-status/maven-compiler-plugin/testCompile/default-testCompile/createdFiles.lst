@@ -1,0 +1,11 @@
+api\testcases\UserTestwithLogs.class
+DemoAPI\PostAPI.class
+DemoAPI\PutAPI.class
+api\utilities\ExcelReader.class
+DemoAPI\GetAPI.class
+api\endpoints\userEndPoints.class
+api\testcases\UserTest2.class
+DemoAPI\PatchAPI.class
+api\endpoints\Routes.class
+api\testcases\UserTest.class
+api\payload\user.class
